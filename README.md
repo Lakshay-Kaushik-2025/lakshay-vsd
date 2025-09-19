@@ -2,7 +2,7 @@
 
 This repository contains all the work I will be doing in the 10 weeks program offered by **VSD VLSI** starting from September 18 2025.
 
-This repository documents my **week-by-week progress** with tasks inside each week.  
+This repository documents my **week-by-week progress** with tasks and assignments inside each week.  
 
 
 
