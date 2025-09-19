@@ -10,9 +10,9 @@ This repository documents my **week-by-week progress** with tasks and assignment
 
 ## Week 0 — Setup & Tools
 
-| Task | Description | Status |
-|------|-------------|---------|
-| **Task 0** |  [Tools Installation](Week_0/Week-0.md) — Installed **Iverilog**, **Yosys**, and **gtkWave** | ✅ Done |
+| Task | Description | 
+|------|-------------|
+| **Task 0** |  [Tools Installation](Week_0/Week-0.md) — Installed **Iverilog**, **Yosys**, and **gtkWave** | 
 
 
 
