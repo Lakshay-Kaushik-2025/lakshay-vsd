@@ -92,7 +92,7 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make 
 $ sudo make install
 ```
-![Alt Text](Images/yosys.png)
+![Alt Text](images/yosys.png)
 
 
 ## 
@@ -102,7 +102,7 @@ $ sudo make install
 ```bash
 $ sudo apt-get install iverilog
 ```
-![Alt Text](Images/iverilog.png)
+![Alt Text](images/iverilog.png)
 
 
 ## **GTKWave**
@@ -111,7 +111,7 @@ $ sudo apt-get install iverilog
 $ sudo apt update
 $ sudo apt install gtkwave
 ```
-![Alt Text](Images/gtkwave.png)
+![Alt Text](images/gtkwave.png)
 
 
 
