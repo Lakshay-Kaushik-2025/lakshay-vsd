@@ -69,7 +69,7 @@ sudo apt install gtkwave
 
 ###  Step 3: Simulate the Design
 
-Compile the design and testbench:
+Compile the design and testbench(Be in the directory where you have both the codes):
 
 ```shell
 iverilog good_mux.v tb_good_mux.v
