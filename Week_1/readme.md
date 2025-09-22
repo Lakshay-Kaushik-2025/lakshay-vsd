@@ -42,7 +42,7 @@ A **testbench** is a simulation environment that applies various inputs to your 
 **iverilog** is an open-source simulator for Verilog. Here’s the typical simulation flow:
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/3ca190fb-cfa4-4abb-b9e1-0151b3c4bdba" alt="iverilog Simulation Flow" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/iverilog_flow.png" alt="iverilog Simulation Flow" width="70%">
 </div>
 
 - Both the design and testbench are provided as input to iverilog.
@@ -89,7 +89,7 @@ gtkwave tb_good_mux.vcd
 ```
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b" alt="GTKWave Example" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/gtkwave.png" alt="GTKWave Example" width="70%">
 </div>
 
 ---
@@ -132,6 +132,10 @@ endmodule
 - **Verification:** Checks correctness
 - **Extensibility:** Supports custom flows
 
+  <div align="center">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/yosys_setup.png" alt="Yosys Gate-level Schematic" width="70%">
+</div>
+
 ###  Why Do Libraries Have Different Gate "Flavors"?
 
 A `.lib` file contains many versions of each gate (like AND, OR, NOT) with different properties:
@@ -158,12 +162,12 @@ Let’s synthesize the `good_mux` design using Yosys!
 
 2. **Read the liberty library**
     ```shell
-    read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+    read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
 3. **Read the Verilog code**
     ```shell
-    read_verilog /home/vsduser/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/good_mux.v
+    read_verilog good_mux.v
     ```
 
 4. **Synthesize the design**
@@ -173,7 +177,7 @@ Let’s synthesize the `good_mux` design using Yosys!
 
 5. **Technology mapping**
     ```shell
-    abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+    abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
 6. **Visualize the gate-level netlist**
@@ -182,17 +186,17 @@ Let’s synthesize the `good_mux` design using Yosys!
     ```
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3" alt="Yosys Gate-level Schematic" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/netlist.png" alt="Yosys Gate-level Schematic" width="70%">
 </div>
 
 ---
 
 ## 7. Summary
 
-- You learned about simulators, designs, and testbenches.
-- You ran your first Verilog simulation with iverilog and visualized waveforms.
-- You analyzed the 2-to-1 mux code.
-- You explored Yosys and learned why gate libraries have various flavors.
+- Learned about simulators, designs, and testbenches.
+- Ran your first Verilog simulation with iverilog and visualized waveforms.
+- Analyzed the 2-to-1 mux code.
+- Explored Yosys and learned why gate libraries have various flavors.
 
 
 ---
