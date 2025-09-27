@@ -210,7 +210,7 @@ always @(*) begin
 end
 endmodule
 ```
-![Screenshot_2025-05-28_12-39-30](https://github.com/user-attachments/assets/3f6068f3-726d-4192-b3cd-f88b3611e752)
+![Screenshot_2025-05-28_12-39-30](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab7.png)
 
 > **Note:** Steps to perform the above labs are shown in [Day 1](https://github.com/Ahtesham18112011/RTL_workshop/tree/main/Day_1).
 
@@ -298,7 +298,7 @@ always @(*) begin
 end
 endmodule
 ```
-![mux_generate](https://github.com/user-attachments/assets/80789638-c349-44a9-92f4-7597d5925c63)
+![mux_generate](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab8.png)
 
 ---
 
@@ -328,7 +328,7 @@ always @(*) begin
 end
 endmodule
 ```
-![demux-case](https://github.com/user-attachments/assets/1836a255-e260-47de-9a8e-45899b19fc03)
+![demux-case](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab9.png)
 
 ---
 
@@ -353,7 +353,7 @@ always @(*) begin
 end
 endmodule
 ```
-![demux-generate](https://github.com/user-attachments/assets/a5a2c004-a16f-44cd-8d80-c23f1c932e6c)
+![demux-generate](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab10.png)
 
 ---
 
@@ -387,7 +387,7 @@ module fa (input a, input b, input c, output co, output sum);
     assign {co, sum} = a + b + c;
 endmodule
 ```
-![rca_org](https://github.com/user-attachments/assets/1d8876f9-e303-4a73-945e-97756a37bb73)
+![rca_org](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab11.png)
 
 ---
 
