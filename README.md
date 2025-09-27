@@ -22,6 +22,12 @@ This repository documents my **week-by-week progress** with tasks and assignment
 - Learned about **basic environment setup** for RTL design and synthesis.  
 - Prepared the system for upcoming **RTL → GDSII flow experiments**.
 
+###  Key Learnings from Week 1
+- Verilog **RTL design** and simulation.  
+- Using **Icarus Verilog and GTKWave** for simulation and waveform analysis.  
+- Logic synthesis using **Yosys and the SKY130 open-source PDK**.
+- Key digital design concepts: testbenches, timing libraries, D flip-flop coding styles, and **optimization techniques**.  
+
 
 ##  Acknowledgment  
 
