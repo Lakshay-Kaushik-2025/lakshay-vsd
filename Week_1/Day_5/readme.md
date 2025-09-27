@@ -183,7 +183,7 @@ always @(*) begin
 end
 endmodule
 ```
-![badcase](https://github.com/user-attachments/assets/4ccf37aa-5502-4750-bedb-9b2ec0748a53)
+![badcase](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab6.png)
 
 ---
 
