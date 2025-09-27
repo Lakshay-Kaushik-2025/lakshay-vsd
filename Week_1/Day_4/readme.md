@@ -130,7 +130,7 @@ Run GLS for the synthesized MUX.
 Use this command (adjust paths as needed):
 
 ```shell
-iverilog /path/to/primitives.v /path/to/sky130_fd_sc_hd.v ternary_operator_mux.v testbench.v
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux.v tb_ternary_operator_mux.v
 ```
 
 ![lab3](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_4/images/lab1.3.png)
