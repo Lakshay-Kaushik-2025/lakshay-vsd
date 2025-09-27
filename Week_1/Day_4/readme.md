@@ -15,8 +15,8 @@ You’ll learn both the theory and practical implications, complete with hands-o
 - [1. Gate-Level Simulation (GLS)](#1-gate-level-simulation-gls)
 - [2. Synthesis-Simulation Mismatch](#2-synthesis-simulation-mismatch)
 - [3. Blocking vs. Non-Blocking Assignments in Verilog](#3-blocking-vs-non-blocking-assignments-in-verilog)
-  - [3.1 Blocking Statements](#31-blocking-statements)
-  - [3.2 Non-Blocking Statements](#32-non-blocking-statements)
+  - [3.1 Blocking Statements](#6-blocking-statements)
+  - [3.2 Non-Blocking Statements](#7-non-blocking-statements)
   - [3.3 Comparison Table](#33-comparison-table)
 - [4. Labs](#4-labs)
 - [5. Summary](#5-summary)
@@ -66,7 +66,7 @@ A **synthesis-simulation mismatch** occurs when the simulation results of RTL (p
 
 Verilog offers two types of procedural assignments:
 
-### 3.1 Blocking Statements (`=`)
+### 6 Blocking Statements (`=`)
 
 - **Syntax:** `=`
 - **Execution:** Sequential, executes immediately.
@@ -76,7 +76,7 @@ Verilog offers two types of procedural assignments:
   always @(*) y = a & b;
   ```
 
-### 3.2 Non-Blocking Statements (`<=`)
+### 7 Non-Blocking Statements (`<=`)
 
 - **Syntax:** `<=`
 - **Execution:** Scheduled, executes concurrently at the end of the time step.
