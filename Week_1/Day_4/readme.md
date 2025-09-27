@@ -206,7 +206,7 @@ always @ (*) begin
 end
 ```
 
-![lab6](https://github.com/user-attachments/assets/42cac594-0008-4c7b-b415-43e6565b6081)
+![lab6](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_4/images/lab3.png)
 
 ---
 
@@ -214,7 +214,7 @@ end
 
 Synthesize the corrected version of the module and observe the results.
 
-![lab7](https://github.com/user-attachments/assets/833bfacc-3b76-40fa-814c-47f0d783a6e0)
+![lab7](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_4/images/lab3.2.png)
 
 ---
 
