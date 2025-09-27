@@ -111,7 +111,7 @@ endmodule
 ```
 - **Function:** `y = i1` if `sel = 1`; else `y = i0`.
 
-![lab1](https://github.com/user-attachments/assets/3f5eb05a-1861-4bb8-940c-6ff9f2af87fb)
+![lab1](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_4/images/lab1.1.png)
 
 ---
 
@@ -120,7 +120,7 @@ endmodule
 Synthesize the above MUX using Yosys.  
 _Follow the standard Yosys synthesis flow._
 
-![lab2](https://github.com/user-attachments/assets/7a0cdc7c-cbbd-4943-bd3d-130a0d66b9b1)
+![lab2](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_4/images/lab1.png)
 
 ---
 
@@ -133,7 +133,7 @@ Use this command (adjust paths as needed):
 iverilog /path/to/primitives.v /path/to/sky130_fd_sc_hd.v ternary_operator_mux.v testbench.v
 ```
 
-![lab3](https://github.com/user-attachments/assets/9acf45b3-2e42-4ac1-88ae-b4a494cc8d87)
+![lab3](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_4/images/lab1.3.png)
 
 ---
 
