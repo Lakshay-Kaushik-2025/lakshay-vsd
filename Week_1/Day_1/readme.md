@@ -31,7 +31,7 @@ The **design** is your Verilog code describing the intended logic functionality.
 A **testbench** is a simulation environment that applies various inputs to your design and checks if the outputs are correct.
 
 <div align="center">
-  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/testbench_components.png" alt="Design & Testbench Overview" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_1/images/testbench_components.png" alt="Design & Testbench Overview" width="70%">
 </div>
 
 ---
@@ -41,7 +41,7 @@ A **testbench** is a simulation environment that applies various inputs to your 
 **iverilog** is an open-source simulator for Verilog. Here’s the typical simulation flow:
 
 <div align="center">
-  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/iverilog_flow.png" alt="iverilog Simulation Flow" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_1/images/iverilog_flow.png" alt="iverilog Simulation Flow" width="70%">
 </div>
 
 - Both the design and testbench are provided as input to iverilog.
@@ -88,7 +88,7 @@ gtkwave tb_good_mux.vcd
 ```
 
 <div align="center">
-  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/gtkwave.png" alt="GTKWave Example" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_1/images/gtkwave.png" alt="GTKWave Example" width="70%">
 </div>
 
 ---
@@ -132,7 +132,7 @@ endmodule
 - **Extensibility:** Supports custom flows
 
   <div align="center">
-  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/yosys_setup.png" alt="Yosys Gate-level Schematic" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_1/images/yosys_setup.png" alt="Yosys Gate-level Schematic" width="70%">
 </div>
 
 ###  Why Do Libraries Have Different Gate "Flavors"?
@@ -185,7 +185,7 @@ Let’s synthesize the `good_mux` design using Yosys!
     ```
 
 <div align="center">
-  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/netlist.png" alt="Yosys Gate-level Schematic" width="70%">
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_1/images/netlist.png" alt="Yosys Gate-level Schematic" width="70%">
 </div>
 
 ---
