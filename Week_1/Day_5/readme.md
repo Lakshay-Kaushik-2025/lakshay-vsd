@@ -155,13 +155,13 @@ always @(*) begin
 end
 endmodule
 ```
-![compcase](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab3.png)
+![compcase](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab4.png)
 
 ---
 
 ### Lab 6: Synthesis Result of Lab 5
 
-![compcase_synth](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab3.1.png)
+![compcase_synth](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab4.1.png)
 
 ---
 
