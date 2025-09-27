@@ -391,7 +391,7 @@ endmodule
 
 ---
 
-> **Note:** Steps to perform the above labs are already shown in [Day 1](https://github.com/Ahtesham18112011/RTL_workshop/tree/main/Day_1).
+> **Note:** Steps to perform the above labs are already shown in [Day 1](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_1/readme.md).
 
 ---
 
