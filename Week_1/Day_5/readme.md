@@ -110,13 +110,13 @@ always @(*) begin
 end
 endmodule
 ```
-![in_comp_if](https://github.com/user-attachments/assets/91d1cc1d-bb3a-4ea8-a272-363414777868)
+![in_comp_if](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab1.png)
 
 ---
 
 ### Lab 2: Synthesis Result of Lab 1
 
-![incomp_synth](https://github.com/user-attachments/assets/691045e7-39e0-4e6c-98bd-511b501fbe35)
+![incomp_synth](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab1.1.png)
 
 ---
 
@@ -132,13 +132,13 @@ always @(*) begin
 end
 endmodule
 ```
-![icomp2](https://github.com/user-attachments/assets/2f614956-e4af-4d29-80ae-13a167e7831d)
+![icomp2](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab2.png)
 
 ---
 
 ### Lab 4: Synthesis Result of Lab 3
 
-![incomp2synth](https://github.com/user-attachments/assets/880ff7bb-23fb-4362-bf8f-a2494a854b53)
+![incomp2synth](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab2.2.png)
 
 ---
 
@@ -155,13 +155,13 @@ always @(*) begin
 end
 endmodule
 ```
-![compcase](https://github.com/user-attachments/assets/cfe97c45-a487-4f06-b4a2-74b3a61bee14)
+![compcase](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab3.png)
 
 ---
 
 ### Lab 6: Synthesis Result of Lab 5
 
-![compcase_synth](https://github.com/user-attachments/assets/8c871511-6e55-4e80-be11-86e9efd87cad)
+![compcase_synth](https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_5/images/lab3.1.png)
 
 ---
 
