@@ -46,7 +46,7 @@ In this section we will walk through the whole process of modeling the VSDBabySo
   
   Two most important signals are `CLK` and `OUT`. The `CLK` signal is provided by the PLL and the `OUT` is the output of the DAC model. Here is the final result of the modeling process:
   
-  ![pre_synth_sim](images/gtk_pre_simulation.png)
+  <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_1/Day_1/images/testbench_components.png" alt="Design & Testbench Overview" width="70%">
 
 In this picture we can see the following signals:
 
