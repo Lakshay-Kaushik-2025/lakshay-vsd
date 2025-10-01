@@ -3,7 +3,6 @@
 VSDBabySoC is a small SoC including PLL, DAC, and a RISCV-based processor named RVMYTH.
 
 
-
 # VSDBabySoC Modeling
 
 Here we are going to model and simulate the VSDBabySoC using `iverilog`, then we will show the results using `gtkwave` tool. Some initial input signals will be fed into `vsdbabysoc` module that make the pll start generating the proper `CLK` for the circuit. The clock signal will make the `rvmyth` to execute instructions in its `imem`. As a result the register `r17` will be filled with some values cycle by cycle. These values are used by dac core to provide the final output signal named `OUT`. So we have 3 main elements (IP cores) and a wrapper as an SoC and of-course there would be also a testbench module out there.
@@ -55,8 +54,6 @@ In this picture we can see the following signals:
   * **OUT:** This is the `output OUT` signal of the `VSDBabySoC` module. This signal comes from the DAC (due to simulation restrictions it behaves like a digital signal which is incorrect), originally.
   * **RV_TO_DAC[9:0]:** This is the 10-bit `output [9:0] OUT` port of the `RVMYTH` core. This port comes from the RVMYTH register #17, originally.
   * **OUT:** This is a `real` datatype wire which can simulate analog values. It is the `output wire real OUT` signal of the `DAC` module. This signal comes from the DAC, originally.
-
-**PLEASE NOTE** that the sythesis process does not support `real` variables, so we must use the simple `wire` datatype for the `\vsdbabysoc.OUT` instead. The `iverilog` simulator always behaves `wire` as a digital signal. As a result we can not see the analog output via `\vsdbabysoc.OUT` port and we need to use `\dac.OUT` (which is a `real` datatype) instead.
 
 # OpenLANE
 
@@ -117,71 +114,66 @@ In this picture we can see the following signals:
   * **\core.OUT[9:0]:** This is the 10-bit `output [9:0] OUT` port of the `RVMYTH` core. This port comes from the RVMYTH register #17, originally.
   * **OUT:** This is a `real` datatype wire which can simulate analog values. It is the `output wire real OUT` signal of the `DAC` module. This signal comes from the DAC, originally.
 
-**PLEASE NOTE** that the sythesis process does not support `real` variables, so we must use the simple `wire` datatype for the `\vsdbabysoc.OUT` instead. The `iverilog` simulator always behaves `wire` as a digital signal. As a result we can not see the analog output via `\vsdbabysoc.OUT` port and we need to use `\dac.OUT` (which is a `real` datatype) instead.
-
 ## Yosys final report
 
   ```
-  === vsdbabysoc ===
+  Printing statistics.
 
-   Number of wires:               5559
-   Number of wire bits:           5559
-   Number of public wires:        1323
-   Number of public wire bits:    1323
+=== vsdbabysoc ===
+
+   Number of wires:               4737
+   Number of wire bits:           6211
+   Number of public wires:        4737
+   Number of public wire bits:    6211
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               5552
+   Number of cells:               5913
      avsddac                         1
-     avsdpll1v8                      1
-     sky130_fd_sc_hd__a211o_2        1
-     sky130_fd_sc_hd__a21o_2         4
-     sky130_fd_sc_hd__a21oi_2       19
-     sky130_fd_sc_hd__a221o_2       56
-     sky130_fd_sc_hd__a22o_2        32
-     sky130_fd_sc_hd__a2bb2o_2      14
-     sky130_fd_sc_hd__a2bb2oi_2     12
-     sky130_fd_sc_hd__a311o_2        1
-     sky130_fd_sc_hd__a31o_2         7
-     sky130_fd_sc_hd__a31oi_2        3
-     sky130_fd_sc_hd__a32o_2         8
-     sky130_fd_sc_hd__a41o_2         1
-     sky130_fd_sc_hd__and2_2        38
-     sky130_fd_sc_hd__and3_2         5
-     sky130_fd_sc_hd__and4b_2        1
-     sky130_fd_sc_hd__buf_1        885
-     sky130_fd_sc_hd__conb_1         6
-     sky130_fd_sc_hd__dfxtp_2     1144
-     sky130_fd_sc_hd__inv_2       1026
-     sky130_fd_sc_hd__mux2_1       513
-     sky130_fd_sc_hd__nand2_2        3
-     sky130_fd_sc_hd__nand4_2       32
-     sky130_fd_sc_hd__nor2_2        61
-     sky130_fd_sc_hd__nor2b_2        1
-     sky130_fd_sc_hd__nor4_2         2
-     sky130_fd_sc_hd__o2111a_2       1
-     sky130_fd_sc_hd__o2111ai_2     65
-     sky130_fd_sc_hd__o211a_2        4
-     sky130_fd_sc_hd__o21a_2         6
-     sky130_fd_sc_hd__o21ai_2        9
-     sky130_fd_sc_hd__o221a_2      955
-     sky130_fd_sc_hd__o221ai_2       2
-     sky130_fd_sc_hd__o22a_2       427
-     sky130_fd_sc_hd__o2bb2a_2      23
-     sky130_fd_sc_hd__o2bb2ai_2      2
-     sky130_fd_sc_hd__o311a_2        2
-     sky130_fd_sc_hd__o31a_2        10
-     sky130_fd_sc_hd__o32a_2        15
-     sky130_fd_sc_hd__or2_2         48
-     sky130_fd_sc_hd__or2b_2        32
-     sky130_fd_sc_hd__or3_2         35
-     sky130_fd_sc_hd__or4_2         36
-     sky130_fd_sc_hd__or4b_2         3
-
-   Area for cell type \avsddac is unknown!
-   Area for cell type \avsdpll1v8 is unknown!
-
-   Chip area for module '\vsdbabysoc': 58173.292800
+     avsdpll                         1
+     sky130_fd_sc_hd__a2111oi_0      5
+     sky130_fd_sc_hd__a211oi_1      10
+     sky130_fd_sc_hd__a21boi_0       4
+     sky130_fd_sc_hd__a21o_2         3
+     sky130_fd_sc_hd__a21oi_1      686
+     sky130_fd_sc_hd__a221oi_1     168
+     sky130_fd_sc_hd__a22o_2         4
+     sky130_fd_sc_hd__a22oi_1      137
+     sky130_fd_sc_hd__a311oi_1       4
+     sky130_fd_sc_hd__a31o_2         1
+     sky130_fd_sc_hd__a31oi_1      315
+     sky130_fd_sc_hd__a32oi_1        1
+     sky130_fd_sc_hd__a41oi_1       17
+     sky130_fd_sc_hd__and2_2        12
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__clkinv_1     568
+     sky130_fd_sc_hd__dfxtp_1     1144
+     sky130_fd_sc_hd__lpflow_inputiso0p_1      1
+     sky130_fd_sc_hd__mux2i_1       14
+     sky130_fd_sc_hd__nand2_1      852
+     sky130_fd_sc_hd__nand3_1      258
+     sky130_fd_sc_hd__nand3b_1       1
+     sky130_fd_sc_hd__nand4_1       53
+     sky130_fd_sc_hd__nor2_1       428
+     sky130_fd_sc_hd__nor3_1        42
+     sky130_fd_sc_hd__nor4_1         3
+     sky130_fd_sc_hd__o2111ai_1     24
+     sky130_fd_sc_hd__o211ai_1      62
+     sky130_fd_sc_hd__o21a_1        12
+     sky130_fd_sc_hd__o21ai_0      856
+     sky130_fd_sc_hd__o21bai_1      12
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o221ai_1       3
+     sky130_fd_sc_hd__o22a_2         1
+     sky130_fd_sc_hd__o22ai_1      135
+     sky130_fd_sc_hd__o311ai_0       3
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__o31ai_1        4
+     sky130_fd_sc_hd__o32ai_1        1
+     sky130_fd_sc_hd__o41ai_1        2
+     sky130_fd_sc_hd__or2_2         12
+     sky130_fd_sc_hd__xnor2_1       16
+     sky130_fd_sc_hd__xor2_1        34
   ```
 
 
