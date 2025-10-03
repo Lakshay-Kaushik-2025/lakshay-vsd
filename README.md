@@ -14,7 +14,7 @@ This repository documents my **week-by-week progress** with tasks and assignment
 |------|-------------|
 | **WEEK 0** |  [Tools Installation](Week_0/Week-0.md) | 
 | **WEEK 1** |  [Synthesis & GLS](Week_1/) |
-
+| **WEEK 2** |  [SoC Fundamentals and Modelling](Week_2/)
 
 
 ###  Key Learnings from Week 0
@@ -26,7 +26,12 @@ This repository documents my **week-by-week progress** with tasks and assignment
 - Verilog **RTL design** and simulation.  
 - Using **Icarus Verilog and GTKWave** for simulation and waveform analysis.  
 - Logic synthesis using **Yosys and the SKY130 open-source PDK**.
-- Key digital design concepts: testbenches, timing libraries, D flip-flop coding styles, and **optimization techniques**.  
+- Key digital design concepts: testbenches, timing libraries, D flip-flop coding styles, and **optimization techniques**.
+
+### Key Learnings from Week 2
+- Fundamental understanding of **SoC Designing** and Structure.
+- RTL simulation of BabySoC using **gtkwave** and **iverilog**.
+- Synthesis and Post synthesis simulation of the SoC using "**OpenLane**" toolchain.
 
 
 ##  Acknowledgment  
