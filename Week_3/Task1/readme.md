@@ -42,7 +42,7 @@ write_verilog -noattr rvmyth_synth.v
 
 ```
 
-<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_3/Task1/images/synth_stat.png" alt="Design & Testbench Overview" width="100%">
+<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_3/Task1/images/synth_stat_real.png" alt="Design & Testbench Overview" width="100%">
 
 
 
