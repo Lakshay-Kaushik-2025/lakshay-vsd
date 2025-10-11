@@ -42,7 +42,7 @@ write_verilog -noattr rvmyth_synth.v
 
 ```
 
-
+<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_2/task_2/images/gtk_pre_simultion.png" alt="Design & Testbench Overview" width="100%">
 
 
 
