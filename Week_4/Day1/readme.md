@@ -146,9 +146,7 @@ You can download ngspice for Windows from the official source using the followin
     plot -vdd#branch
 
 ### The plot of Ids vs Vds over constant Vgs:
-![WhatsApp Image 2024-12-10 at 9 31 06 PM](https://github.com/user-attachments/assets/5b9a1024-cd61-428c-919c-af8bfdbf694d)
-![WhatsApp Image 2024-12-10 at 9 31 06 PM (2)](https://github.com/user-attachments/assets/99893245-4e92-48f1-83a1-f66699612970)
-![WhatsApp Image 2024-12-10 at 9 31 06 PM (1)](https://github.com/user-attachments/assets/718c78cf-4b07-49fd-b774-913e2e19d72f)
+<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_3/Task1/images/synth_stat_real.png" alt="Design & Testbench Overview" width="100%">
 
 
 
