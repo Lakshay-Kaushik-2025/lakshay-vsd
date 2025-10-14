@@ -15,6 +15,7 @@ This repository documents my **week-by-week progress** with tasks and assignment
 | **WEEK 0** |  [Tools Installation](Week_0/Week-0.md) | 
 | **WEEK 1** |  [Synthesis & GLS](Week_1/) |
 | **WEEK 2** |  [SoC Fundamentals and Modelling](Week_2/)
+| **WEEK 3** |  [Post Synthesis Simulation and STA Analysis](Week_3/)
 
 
 ###  Key Learnings from Week 0
@@ -32,6 +33,11 @@ This repository documents my **week-by-week progress** with tasks and assignment
 - Fundamental understanding of **SoC Designing** and Structure.
 - RTL simulation of BabySoC using **gtkwave** and **iverilog**.
 - Synthesis and Post synthesis simulation of the SoC using "**OpenLane**" toolchain.
+
+### Key Learnings from Week 3
+- **Post Synthesis Simulation** Of BabySoC and waveform analysis.
+- Installed **OpenSTA** for timing analysis.
+- **STA analysis** of the synthesised BabySoC design with help of **Tcl** scripts.
 
 
 ##  Acknowledgment  
