@@ -3,36 +3,6 @@ OpenSTA (Open Static Timing Analyzer) is a versatile tool used for timing analys
 
 
 ## Static timing analysis using OpenSTA
-#### Timing Ananlysis Using In line Commands
-    
-       read_liberty /OpenSTA/examples/nangate45_slow.lib.gz
-       read_verilog /OpenSTA/examples/example1.v
-       link_design top
-       create_clock -name clk -period 10 {clk1 clk2 clk3}
-       set_input_delay -clock clk 0 {in1 in2}
-       report_checks
-
-![WhatsApp Image 2024-12-07 at 9 14 09 AM](https://github.com/user-attachments/assets/5c3805ca-2199-4b09-bfaa-c47d0806c5a3)
-![WhatsApp Image 2024-12-07 at 9 14 09 AM (1)](https://github.com/user-attachments/assets/51d631ae-20e7-43b3-b4bd-d1ed37d60998)
-
-#### Timing Analysis using TCL file
-    read_liberty-min sky130_fd sc hd tt 025C 1v80.lib
-    read liberty max sky130 fd sc hd tt 025C 1v80.lib
-    read_liberty-min avsdpll.lib
-    read liberty -max avsdpll.lib
-    read_liberty min avsddac.lib
-    read_liberty -max avsddąc.lib
-    read verilog vsdbabysoc.synth.v
-    link design vsdbabysoc
-    read_sdc vsdbabysoc_synthesis.sdc
-    report checks
-    
-    
-![WhatsApp Image 2024-12-07 at 9 14 08 AM (1)](https://github.com/user-attachments/assets/12dd9c03-5fbc-4a7a-aced-2942d80321d7)
-![WhatsApp Image 2024-12-07 at 9 14 08 AM (2)](https://github.com/user-attachments/assets/b6183d55-418e-4ef5-96d3-cba7c43b676c)
-![WhatsApp Image 2024-12-07 at 9 14 08 AM](https://github.com/user-attachments/assets/84818f23-16f1-4fde-99ee-1980ceca70e0)
-
-
 
 #### VSDBabySoC basic timing analysis
      read_liberty -min /OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -47,8 +17,7 @@ OpenSTA (Open Static Timing Analyzer) is a versatile tool used for timing analys
      report_checks
 
      
-![WhatsApp Image 2024-12-07 at 9 14 08 AM (4)](https://github.com/user-attachments/assets/d67e5fd1-99a8-47b5-a8f4-cf6063e07bd5)
-![WhatsApp Image 2024-12-07 at 9 14 07 AM](https://github.com/user-attachments/assets/c8652c4e-392d-4881-a97e-288e81c679b2)
+
 
      
 ### **VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)**  
