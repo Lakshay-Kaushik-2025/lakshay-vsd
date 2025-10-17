@@ -90,7 +90,7 @@ In MOS devices, **Rp** (PMOS) and **Rn** (NMOS) act as **non-linear resistors**,
        .end
 
 #### The plot of Ids vs Vds over constant Vgs:
-<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day1/images/spice_sim_day1.png" alt="Design & Testbench Overview" width="100%">
+<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day2/images/idvdday_2.png" alt="Design & Testbench Overview" width="100%">
 ##### EXAMPLE 2
       *Model Description
        .param temp=27
@@ -116,7 +116,7 @@ In MOS devices, **Rp** (PMOS) and **Rn** (NMOS) act as **non-linear resistors**,
          .endc
          .end
 ####  The plot of Ids vs Vgs over constant Vds:
-<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day1/images/spice_sim_day1.png" alt="Design & Testbench Overview" width="100%">
+<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day2/images/idvgs_day_2.png" alt="Design & Testbench Overview" width="100%">
 
 
 
