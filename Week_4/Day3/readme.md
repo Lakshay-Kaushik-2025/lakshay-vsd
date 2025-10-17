@@ -83,7 +83,7 @@ In the **velocity-saturated** case, the **switching threshold (Vm)** is the poin
         .endc
         .end
         
-<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day1/images/spice_sim_day1.png" alt="Design & Testbench Overview" width="100%">
+<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day3/images/vtc_cmos_day3.png" alt="Design & Testbench Overview" width="100%">
 
 
 - **Switching Threshold (VM):**  
@@ -111,7 +111,7 @@ In the **velocity-saturated** case, the **switching threshold (Vm)** is the poin
           run
           .endc
           .end
- <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day1/images/spice_sim_day1.png" alt="Design & Testbench Overview" width="100%">
- <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day1/images/spice_sim_day1.png" alt="Design & Testbench Overview" width="100%">
+ <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day3/images/transient_analysis_cmos_day3.png" alt="Design & Testbench Overview" width="100%">
+ <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day3/images/trans_analysis_cmos_day3.png" alt="Design & Testbench Overview" width="100%">
 - **Propagation Delay:**  
   The time difference (measured at 50% of input-output transition) between the input signal change and the corresponding output signal switch in a logic gate (e.g., inverter).
