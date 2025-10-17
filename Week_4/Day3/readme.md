@@ -1,126 +1,118 @@
-# SPICE SIMULATION FOR LOWER NODES AND VELOCITY SATURATION EFFECT
-#### SPICE simulation for lower nodes
-![Screenshot 2024-12-12 222449](https://github.com/user-attachments/assets/4afe1119-b9e8-4720-b119-5c748c15b79b)
-![Screenshot 2024-12-12 222501](https://github.com/user-attachments/assets/a4e1f3e7-0744-4aea-b9a0-555725f4458b)
-![Screenshot 2024-12-12 222512](https://github.com/user-attachments/assets/51dcfc4e-1bf6-432a-8c92-62b25bf697ac)
+# **1. Voltage Transfer Characteristics: SPICE Simulations**  
+For a **CMOS inverter**, the **SPICE deck** includes:
 
-For **long-channel devices**, drain current shows a **quadratic dependence** on gate voltage.  
-For **short-channel devices**, it is **quadratic at low gate voltage** but becomes **linear at higher voltages** due to **velocity saturation**.
-![Screenshot 2024-12-12 222526](https://github.com/user-attachments/assets/74266571-2ac3-49bf-94ed-65dbaa1d78d8)
+- **Component Connectivity:** Define connections between components like **PMOS**, **NMOS**, **Vdd**, **Vss**, and **Vin/Vout**.
+- **Component Values:** Specify values for components such as **threshold voltages (Vth)**, **transistor sizes**, and **supply voltages**.
+- **Identify Nodes:** Identify all electrical nodes like **Vin**, **Vout**, **source**, **drain**, and **bulk** for both transistors.
+- **Name Nodes:** Assign names to each node, ensuring clear identification during simulations (e.g., **Vout** for the output node).
+![Screenshot 2024-12-13 003927](https://github.com/user-attachments/assets/cbf4ee58-97a1-4389-96d3-f56df12d93e6)
+### SPICE simulation for CMOS inverter
+SPICE Netlist for CMOS Inverter
+A **SPICE netlist** for a CMOS inverter includes transistor models, power supply connections, input voltage source, transistor specifications (PMOS and NMOS), and simulation commands (e.g., `.tran` for transient analysis).
+![Screenshot 2024-12-13 003936](https://github.com/user-attachments/assets/833cd2db-1557-497c-be4f-c2ee86a120ee)
+Same Wn/Ln = Wp/Lp = 1.5. Plot out vs in:
+![Screenshot 2024-12-13 003947](https://github.com/user-attachments/assets/cbe47c76-eadf-433c-a4be-5d08b6e95f44)
+Now, Wn/Ln = 1.5 and Wp/Lp = 3.75. Plot out vs in:
+![Screenshot 2024-12-13 003956](https://github.com/user-attachments/assets/37b73a91-1e97-4cd5-924a-4247654711a3)
+## **Static Behavior Evaluation: CMOS Inverter Robustness and Switching Threshold (Vm)**  
+The **switching threshold (Vm)** is the point where **Vin = Vout**, and both transistors are in saturation (since **Vds = Vgs**). At **Vm**, maximum power is drawn due to large current, and it can be graphically found at the intersection of the **VTC** with the **Vin = Vout** line. The analytical expression for **Vm** is obtained by equating the drain currents of PMOS and NMOS (**IDSn = IDSp**).
+![Screenshot 2024-12-13 004003](https://github.com/user-attachments/assets/f2ac7e8f-1cce-4613-94a8-bb3462375d5e)
+![Screenshot 2024-12-13 004012](https://github.com/user-attachments/assets/b1f8f7ae-775d-465d-b22d-a6a700f4384d)
 
-At **lower electric fields**, carrier velocity increases **linearly** with the electric field.  
-At **higher electric fields**, velocity **saturates** and becomes **constant** due to **velocity saturation**.
+In the **velocity-saturated** case, the **switching threshold (Vm)** is the point where both **NMOS** and **PMOS** transistors are in saturation, and the drain currents are equal. This occurs when the **VDS** of both devices is less than the saturation voltage, i.e., **VDSAT < (Vm − VT)**. The threshold voltage **Vm** can be derived by equating the drain currents of both transistors, with the device widths and lengths (W/L ratios) playing a key role in determining the point where both transistors conduct equally.
+![Screenshot 2024-12-13 004020](https://github.com/user-attachments/assets/87908ece-64ca-4866-b973-7705ee51066a)
+![Screenshot 2024-12-13 004028](https://github.com/user-attachments/assets/b2b0e2f1-14b4-4360-8fee-7636da0c1a5d)
+![Screenshot 2024-12-13 004037](https://github.com/user-attachments/assets/9180b205-11f1-42ed-bde0-52b2541725ed)
+![Screenshot 2024-12-13 004046](https://github.com/user-attachments/assets/69898e46-2849-4fdb-97a2-8fd9c390ccf8)
+![Screenshot 2024-12-13 004053](https://github.com/user-attachments/assets/ef02f187-26e5-43a4-8ee4-c476d5b225fb)
 
-![Screenshot 2024-12-12 222535](https://github.com/user-attachments/assets/a7698c98-1ce7-4774-99bb-172579c32628)
-![Screenshot 2024-12-12 222550](https://github.com/user-attachments/assets/4ad308b3-d1fb-4640-8cfe-e00f4d6ce50f)
-![Screenshot 2024-12-12 222603](https://github.com/user-attachments/assets/fe03377d-a55c-469a-ace2-ae1071f7cc33)
 
-**Velocity Saturation Drain Current Model:**  
-- **Technology Parameter:** Saturation voltage (**Vdsat**) – the voltage at which carrier velocity saturates, independent of **Vgs** or **Vds**.  
-- **Vgt** is minimum → FET is in **saturation region** (both long and short channel).  
-- **Vds** is minimum → FET is in **linear region** (both long and short channel).  
-- **Vdsat** is minimum → FET velocity **saturates** (**only for short channel**).
-  ![Screenshot 2024-12-12 222619](https://github.com/user-attachments/assets/6c3e7777-717b-4dab-8872-098222275cdd)
-  ![Screenshot 2024-12-12 222631](https://github.com/user-attachments/assets/25850f89-e319-440d-b104-d3b2968373f8)
-  #### OBSERVATIONS:
-  **Observation 1:** For short-channel devices, at **higher electric fields**, the device enters **velocity saturation**, causing **Ids to remain constant** as **Vds increases**. Here, **Ids** becomes a **linear function of Vgs**, unlike the **quadratic dependence** in long-channel devices.  
+---
 
-**Observation 2:** **Velocity saturation** causes the device to **saturate earlier**.
-## **CMOS Voltage Transfer Characteristics (VTC):**  
-1. Vout is **high** when Vin is low, and Vout is **low** when Vin is high.  
-2. The **transition region** shows a steep drop where both NMOS and PMOS conduct, defining the switching threshold.
-#### MOSFET as a switch
-![Screenshot 2024-12-12 222716](https://github.com/user-attachments/assets/481b40d8-dec1-4e3f-bed2-6a422cb87758)
-![Screenshot 2024-12-12 222727](https://github.com/user-attachments/assets/e14b5a54-ab76-450a-8cbb-32bd5c414175)
-![Screenshot 2024-12-12 222740](https://github.com/user-attachments/assets/c3684f36-747e-405c-a4e0-e2f169640849)
-**Introduction to Standard MOS Voltage-Current Parameters:**  
-In MOS devices, **Rp** (PMOS) and **Rn** (NMOS) act as **non-linear resistors**, where their resistance is a **function of drain current (Ids)**, influenced by gate voltage (Vgs) and drain voltage (Vds).
-![Screenshot 2024-12-12 222754](https://github.com/user-attachments/assets/a0b8534a-4b3e-41d2-bfe1-30d8041b68e8)
-**PMOS/NMOS Drain Current vs. Drain Voltage:**
+## Velocity Saturation and Switching Threshold (Vm) Analysis
 
-1. **Linear Region (Vds < Vdsat):**  
-   - Drain current (**Ids**) increases **linearly** with **Vds**.  
-   - Device behaves like a **resistor** controlled by Vgs.  
+- **Case 1: Velocity Saturation Occurs**  
+  - Happens in short-channel devices or high supply voltage.  
+  - Switching threshold **Vm** occurs when currents of PMOS and NMOS transistors are equal.  
+  - The ratio **r** (PMOS to NMOS strength) influences **Vm**.  
+  - For **Vm ≈ VDD/2**, **r ≈ 1**.  
+  - **Vm** can be adjusted by changing the PMOS or NMOS width:  
+    - Increase PMOS width → shift **Vm** upwards.  
+    - Increase NMOS width → shift **Vm** downwards.  
 
-2. **Saturation Region (Vds ≥ Vdsat):**  
-   - Drain current (**Ids**) becomes **constant** and independent of Vds.  
-   - For **NMOS**, Ids depends on **Vgs - Vth**.  
-   - For **PMOS**, Ids depends on **Vth - Vgs**.  
-![Screenshot 2024-12-12 222804](https://github.com/user-attachments/assets/26460459-1b5d-4545-9934-96ec82fdec7f)
- #### Step1. Convert **PMOS gate-source voltage** to **Vin**.  
- Replace internal node voltages with **Vin**, **Vdd**, **Vss**, and **Vout**.  
- Simulate and plot the **VTC** by varying **Vin** and analyzing **Vout**.
-![Screenshot 2024-12-12 222823](https://github.com/user-attachments/assets/23b04673-d61d-41ea-b347-926069e10347)
-**Step 2 & Step 3:**  
-- Convert **PMOS** and **NMOS drain-source voltages** to **Vout**.  
-- Relate the drain-source voltages of both devices to the output voltage (**Vout**) by considering their respective operating regions (linear or saturation).
-![Screenshot 2024-12-12 222833](https://github.com/user-attachments/assets/90e46877-1003-4bd5-8dea-0bed5e81c6a1)
-![Screenshot 2024-12-12 222841](https://github.com/user-attachments/assets/fd1929e1-ffd4-45b6-a2f6-1d15750467cc)
-**Step 4:**  
-- **Merge the PMOS and NMOS load curves** by combining their drain current (Ids) characteristics with respect to **Vout**.  
-- **Plot the Voltage Transfer Characteristic (VTC)** by mapping **Vout** against **Vin**, showing the transition from low to high output voltage.
-![Screenshot 2024-12-12 222852](https://github.com/user-attachments/assets/7125ef9e-5f05-4ba2-9b58-7cf8269e41df)
+- **Case 2: Velocity Saturation Does Not Occur**  
+  - Applies to long-channel devices or low supply voltage.  
+  - The switching threshold **Vm** is still affected by **r** but with a simpler formula.  
+  - If **r ≈ 1**, **Vm** is near **VDD/2**.
 
+- **PMOS Width Effect on VTC**  
+  - Increasing PMOS width shifts **Vm** upwards.  
+  - Increasing NMOS width shifts **Vm** downwards.  
+  - **Vm** is relatively stable with small variations in transistor ratios.
+
+![Screenshot 2024-12-13 004109](https://github.com/user-attachments/assets/96db3cee-e37e-483c-bc26-b0b73a5e9879)
+### Applications of CMOS inverter in clock network and STA
+![Screenshot 2024-12-13 004117](https://github.com/user-attachments/assets/eca7545e-77fd-445f-9cb3-e4bab470e467)
+![Screenshot 2024-12-13 004125](https://github.com/user-attachments/assets/5c1f76b4-c628-4c1a-99b6-a284ddd10546)
+![Screenshot 2024-12-13 004137](https://github.com/user-attachments/assets/3e8d32f4-0f22-481c-813f-3c5dcbfa747b)
+![Screenshot 2024-12-13 004148](https://github.com/user-attachments/assets/354c9277-12c2-45b0-b4af-2f20acf4d2e6)
 # LABS
-## SPICE simulation for lower nodes and velocity saturation effect
-#### Sky130 Id-Vgs
-##### EXAMPLE 1
-      *Model Description
-      .param temp=27
+## 1. Voltage transfer characteristics: SPICE simulations
+#### Sky130 SPICE simulation for CMOS - VTC
+     *Model Description
+     .param temp=27
 
       *Including sky130 library files
       .lib "sky130_fd_pr/models/sky130.lib.spice" tt
 
       *Netlist Description
-       XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
-       R1 n1 in 55
+       XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.15
+       XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+       Cload out 0 50fF
        Vdd vdd 0 1.8V
        Vin in 0 1.8V
 
-      *simulation commands
-       .op
-       .dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+       *simulation commands
+        .op
+       .dc Vin 0 1.8 0.01
 
-       .control
+        .control
+         run
+        setplot dc1
+        display
+        .endc
+        .end
+        
+![WhatsApp Image 2024-12-12 at 10 59 21 PM](https://github.com/user-attachments/assets/e5b60ff6-bc40-47f8-bedd-d0e1f406fae6)
+![WhatsApp Image 2024-12-12 at 10 59 21 PM (1)](https://github.com/user-attachments/assets/1d249ffe-65a4-4f87-a632-1c8114f4ff69)
 
-       run
-       display
-       setplot dc1
-       .endc
-       .end
+- **Switching Threshold (VM):**  
+  The input voltage (**Vin**) at which the output voltage (**Vout**) equals the input voltage.  
+  - It is the intersection point on the Voltage Transfer Curve (VTC).  
+  - Also referred to as the **midpoint voltage** of the CMOS inverter.
 
-#### The plot of Ids vs Vds over constant Vgs:
-![WhatsApp Image 2024-12-12 at 6 12 00 AM (2)](https://github.com/user-attachments/assets/6bb17e94-6efa-45e4-8f55-7e4bb8f7fe51)
-![WhatsApp Image 2024-12-12 at 6 12 01 AM](https://github.com/user-attachments/assets/f873345a-9f1f-4848-8f94-cd86d104554b)
-
-##### EXAMPLE 2
+  ### Sky130 SPICE simulation for CMOS - Transient Analysis
       *Model Description
        .param temp=27
 
-       *Including sky130 library files
-       .lib "sky130_fd_pr/models/sky130.lib.spice" tt
+      *Including sky130 library files
+        .lib "sky130_fd_pr/models/sky130.lib.spice" tt
 
-       *Netlist Description
-        XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
-        R1 n1 in 55
-        Vdd vdd 0 1.8V
-        Vin in 0 1.8V
+        *Netlist Description
+         XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.15
+         XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+         Cload out 0 50fF
+         Vdd vdd 0 1.8V
+         Vin in 0 PULSE(0V 1.8V 0 0.1ns 0.1ns 2ns 4ns)
 
-        *simulation commands
-         .op
-        .dc Vin 0 1.8 0.1 
-
-        .control
-
-         run
-         display
-         setplot dc1
-         .endc
-         .end
-####  The plot of Ids vs Vgs over constant Vds:
-![WhatsApp Image 2024-12-12 at 6 12 00 AM (1)](https://github.com/user-attachments/assets/7fdd6cf7-680e-4ac3-a27f-0afe30c417a8)
-![WhatsApp Image 2024-12-12 at 6 12 00 AM](https://github.com/user-attachments/assets/a6789ed4-1278-4d7e-8b7c-810556929139)
-
-
-
-
+         *simulation commands
+         .tran 1n 10n
+         .control
+          run
+          .endc
+          .end
+  
+  ![WhatsApp Image 2024-12-12 at 10 59 17 PM](https://github.com/user-attachments/assets/bad784a5-848a-4190-a74f-bd70ce13cf5d)
+  ![WhatsApp Image 2024-12-12 at 10 59 18 PM](https://github.com/user-attachments/assets/7a95401c-8491-4a4d-ac4f-b3cc1dc7ebc5)
+- **Propagation Delay:**  
+  The time difference (measured at 50% of input-output transition) between the input signal change and the corresponding output signal switch in a logic gate (e.g., inverter).
