@@ -49,7 +49,7 @@ write_verilog -noattr /home/lakshay/vsdflow/VSDBabySoC/output/synth/vsdbabysoc_n
 
 ```
 
-<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_3/Task1/images/synth_stat_real.png" alt="Design & Testbench Overview" width="100%">
+<img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_3/Task1/images/vsdbabysoc_yosys_report.png" alt="Design & Testbench Overview" width="100%">
 
 
 
