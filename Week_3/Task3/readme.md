@@ -5,17 +5,19 @@ OpenSTA (Open Static Timing Analyzer) is a versatile tool used for timing analys
 ## Static timing analysis using OpenSTA
 
 #### VSDBabySoC basic timing analysis
-     read_liberty -min /OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
-     read_liberty -max /OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
-     read_liberty -min /OpenSTA/examples/timing_libs/avsdpll.lib
-     read_liberty -max /OpenSTA/examples/timing_libs/avsdpll.lib
-     read_liberty -min /OpenSTA/examples/timing_libs/avsddac.lib
-     read_liberty -max /OpenSTA/examples/timing_libs/avsddac.lib
-     read_verilog /OpenSTA/examples/BabySOC/vsdbabysoc.synth.v
-     link_design vsdbabysoc
-     read_sdc /OpenSTA/examples/BabySOC/vsdbabysoc_synthesis.sdc
-     report_checks
 
+      sta
+      read_liberty -min sky130_fd_sc_hd__tt_025C_1v80.lib
+      read_liberty -max sky130_fd_sc_hd__tt_025C_1v80.lib
+      read_liberty -min avsdpll.lib
+      read_liberty -max avsdpll.lib
+      read_liberty -min avsddac.lib
+      read_liberty -max avsddac.lib
+      read_verilog /home/lakshay/vsdflow/VSDBabySoC/output/synth/vsdbabysoc_new.synth.v
+      link_design vsdbabysoc
+      read_sdc /home/lakshay/vsdflow/VSDBabySoC/src/sdc/synth.sdc
+      report_checks
+     
      
 <img src="https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_3/Task3/images/sta_analysis.png" alt="Design & Testbench Overview" width="100%">
 
