@@ -63,7 +63,6 @@ These noise margins define the tolerance of a circuit to noise without compromis
 # LABS
 ##  Static behavior evaluation: CMOS inverter robustness, Noise margin
 ##### Noise Margin - sky130 Inverter (Wp/Lp=1u/0.15u, Wn/Ln=0.36u/0.15u)
+<img src = "https://github.com/Lakshay-Kaushik-2025/lakshay-vsd/blob/main/Week_4/Day4/images/day_4noisemargin.png" >
 
- ![WhatsApp Image 2024-12-14 at 5 54 27 AM](https://github.com/user-attachments/assets/43ebdaa6-fb03-4f5a-94cd-b2dd3a9c82d3)
- ![WhatsApp Image 2024-12-14 at 5 54 27 AM (1)](https://github.com/user-attachments/assets/293edd46-ef9c-4e2c-afb9-edabb73ad6e7)
-
+ 
