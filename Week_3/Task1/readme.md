@@ -26,19 +26,26 @@ Here is the step-by-step execution plan for running the  commands manually:
 ### **Run the following commands**
 ```bash
 yosys
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+read_liberty -lib avsddac.lib
+read_liberty -lib avsdpll.lib
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80.lib
+
+read_verilog /home/lakshay/vsdflow/VSDBabySoC/src/module/vsdbabysoc.v
+read_verilog -I /home/lakshay/vsdflow/VSDBabySoC/src/include /home/lakshay/vsdflow/VSDBabySoC/src/module/rvmyth.v
 read_verilog -I /home/lakshay/vsdflow/VSDBabySoC/src/include /home/lakshay/vsdflow/VSDBabySoC/src/module/clk_gate.v
-read_verilog -I /home/lakshay/vsdflow/VSDBabySoC/src/include /home/lakshay/vsdflow/VSDBabySoC/src/module/out/rvmyth.v
-synth -top rvmyth
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+synth -top vsdbabysoc
+dfflibmap -liberty /home/lakshay/vsdflow/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 opt
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
+abc -liberty /home/lakshay/vsdflow/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
 flatten
 setundef -zero
 clean -purge
 rename -enumerate
 stat
-write_verilog -noattr rvmyth_synth.v
+write_verilog -noattr /home/lakshay/vsdflow/VSDBabySoC/output/synth/vsdbabysoc_new.synth.v
+
 
 ```
 
