@@ -16,6 +16,7 @@ This repository documents my **week-by-week progress** with tasks and assignment
 | **WEEK 1** |  [Synthesis & GLS](Week_1/) |
 | **WEEK 2** |  [SoC Fundamentals and Modelling](Week_2/)
 | **WEEK 3** |  [Post Synthesis Simulation and STA Analysis](Week_3/)
+| **WEEK 4** |  [CMOS SPICE Simulation](Week_4/)
 
 
 ###  Key Learnings from Week 0
@@ -38,6 +39,11 @@ This repository documents my **week-by-week progress** with tasks and assignment
 - **Post Synthesis Simulation** Of BabySoC and waveform analysis.
 - Installed **OpenSTA** for timing analysis.
 - **STA analysis** of the synthesised BabySoC design with help of **Tcl** scripts.
+
+### Key Learnings from Week 4
+- Introduction to **SPICE** and CMOS Structure.
+- Low Node characterstics and CMOS **VTC** simulations.
+- CMOS inverter **robustness** to power supply variations and Device Variations
 
 
 ##  Acknowledgment  
